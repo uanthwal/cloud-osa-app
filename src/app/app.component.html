@@ -1,0 +1,77 @@
+<div class="app-container">
+  <div *ngIf="isAppLoading" class="loading-icon">
+    <img src="../../assets/loading.gif" />
+  </div>
+
+  <div *ngIf="loadingData" class="loading-data">
+    <img src="../../assets/data_loader.gif" />
+  </div>
+
+  <span class="heading-txt">Cloud Optical Spectrum Analyzer</span>
+  <div id="chartContainer" class="chart-view"></div>
+  <div class="action-container">
+    <button
+      class="single-btn"
+      [class.nrmldisabled]="isPollerActive"
+      [disabled]="isPollerActive"
+      (click)="onClickSingleTrace()"
+    >
+      SINGLE
+    </button>
+
+    <button
+      class="single-btn"
+      [class.nrmldisabled]="isPollerActive"
+      [disabled]="isPollerActive"
+      (click)="onClickStartStop('START')"
+    >
+      START
+    </button>
+
+    <button
+      class="stop-btn"
+      [class.reddisabled]="!isPollerActive"
+      [disabled]="!isPollerActive"
+      (click)="onClickStartStop('STOP')"
+    >
+      STOP
+    </button>
+    <div class="persist-container">
+      Persist Data:
+      <input
+        [(ngModel)]="persistDataOption"
+        type="radio"
+        value="Y"
+        (click)="onClickRadioBtn('Y')"
+        name="group1"
+      />
+      YES
+      <input
+        [(ngModel)]="persistDataOption"
+        type="radio"
+        value="N"
+        (click)="onClickRadioBtn('N')"
+        name="group1"
+      />
+      NO
+    </div>
+  </div>
+  <div class="logs-container">
+    <span class="heading-txt">Logs</span>
+    <div class="logs-output">
+      <pre>{{ logsContent }}</pre>
+    </div>
+  </div>
+  <div class="cmd-container">
+    <span class="heading-txt">Command Console</span>
+    <input
+      type="text"
+      [(ngModel)]="commandIp"
+      placeholder="Enter command here.. e.g. trace, idn"
+    />
+    <button (click)="onClickGetData()">SEND</button>
+    <div class="query-output">
+      <pre>{{ queryResult | json }}</pre>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,134 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+.app-container {
+  .heading-txt {
+    text-align: center;
+    padding: 10px 0px;
+    font-weight: 700;
+    font-size: 30px;
+    display: block;
+  }
+  .loading-icon {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: white;
+    text-align: center;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .loading-data {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: black;
+    opacity: 0.6;
+    text-align: center;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      height: 150px;
+    }
+  }
+  .chart-view {
+    height: 385px;
+    margin: 0 10px;
+    overflow-x: hidden;
+  }
+  .persist-container {
+    padding: 7.5px 7px;
+    border: 1px solid gray;
+  }
+  .action-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    input[type="radio"] {
+      margin: 0px 4px;
+    }
+    button {
+      padding: 10px 25px;
+      margin: 5px;
+      color: white;
+      border: none;
+      outline: none;
+      &:hover {
+        cursor: pointer;
+        outline: none;
+      }
+      &.nrmldisabled {
+        background: #adeaad;
+      }
+      &.reddisabled {
+        background: #f18c8c;
+      }
+    }
+    .single-btn {
+      background-color: #31b730;
+      &:hover {
+        background-color: #0a6909;
+      }
+    }
+    .stop-btn {
+      background: red;
+      &:hover {
+        background: rgb(163, 3, 3);
+      }
+    }
+  }
+
+  .query-output {
+    margin-top: 10px;
+    border: 1px solid gray;
+    height: 200px;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding: 5px;
+    border-radius: 4px;
+    background: black;
+    color: white;
+    font-size: 15px;
+  }
+
+  .logs-container {
+    padding: 10px;
+    .logs-output {
+      border: 1px solid gray;
+      overflow-y: scroll;
+      height: 200px;
+      padding: 0px 10px;
+      border-radius: 4px;
+      background: black;
+      color: white;
+      font-size: 15px;
+    }
+  }
+
+  .cmd-container {
+    padding: 10px;
+    input {
+      width: 200px;
+      margin-right: 1px;
+      padding: 5px;
+      border: 1px solid gray;
+    }
+    button {
+      background: #31b630;
+      color: white;
+      border: none;
+      outline: none;
+      padding: 6px 20px;
+    }
+  }
+
+  .disabled-red {
+    background: #f18c8c;
+  }
+}
