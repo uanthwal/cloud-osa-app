@@ -20,10 +20,12 @@ Cloud Optical Spectrum Analyzer - an application that emulates a very basic text
 2. In the command prompt/Gitbash/Terminal window, navigate to the `backend` directory and execute the command: `pip install -r requirements.txt` to install all the Python packages used by this application.
 3. Execute command: `python backend.py` to start the server code.
 4. To run the web application locally there are two options:
+    
     *a. Running the application from the source code
       1. Open command prompt and navigate to the root level of the cloned repository, execute command `npm install` to install the application dependencies.
       2. Execute command `ng serve` and a message will be displayed that the application is served on `http://localhost:4200`
       3. Open web browser and launch the application using `http://localhost:4200`
+    
     *b. Running the application from the build
       1.  Open command prompt and execute command `npm install http-server -g` to install a lightweight http-server that will serve the web application locally.
       2. Navigate to the root level of the cloned repository and execute command: `http-server dist/cloud-osa-app` a message will be displayed that the application is running on `http://127.0.0.1:8080/`
